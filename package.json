@@ -1,0 +1,35 @@
+{
+  "name": "panel-procesos-penales",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node api.js && vite",
+    "build": "node api.js && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && firebase deploy --only hosting,firestore:rules",
+    "deploy:hosting": "npm run build && firebase deploy --only hosting",
+    "reminders": "node server/reminders.js",
+    "reminders:once": "node server/reminders.js --once"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^5.2.1",
+    "firebase": "^11.10.0",
+    "firebase-admin": "^13.4.0",
+    "mysql2": "^3.23.0",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.5",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.6.0",
+    "vite": "^6.3.5"
+  }
+}
